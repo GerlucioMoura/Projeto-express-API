@@ -1,0 +1,15 @@
+{
+  "name": "projeto-express-api",
+  "version": "1.0.0",
+  "description": "O **express-gerador-typescript** é uma ferramenta de linha de comando que facilita a criação de servidores web utilizando o **Express** já integrado com **TypeScript**.  \r Com ele, é possível gerar rapidamente um template pronto para produção, seguindo as melhores práticas de organização e tipagem do TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

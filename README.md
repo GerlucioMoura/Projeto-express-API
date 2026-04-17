@@ -1,33 +1,121 @@
-# Projeto-express-API
-# Projeto Express Gerador TypeScript
+# Projeto Express API com Prisma + MongoDB
 
-## 📌 Contexto
+Este projeto é uma API REST desenvolvida com **Node.js**, **Express** e **Prisma**, utilizando **MongoDB Atlas** como banco de dados.  
+Ela implementa um CRUD completo para gerenciar usuários.
 
-O **express-gerador-typescript** é uma ferramenta de linha de comando que facilita a criação de servidores web utilizando o **Express** já integrado com **TypeScript**.  
-Com ele, é possível gerar rapidamente um template pronto para produção, seguindo as melhores práticas de organização e tipagem do TypeScript.  
+---
 
-Este projeto tem como objetivo servir como base de aprendizado e prática para desenvolvedores que desejam construir **APIs modernas, escaláveis e seguras**, aproveitando os recursos do TypeScript para aumentar a confiabilidade do código.
+## 🚀 Tecnologias utilizadas
+- Node.js
+- Express
+- Prisma ORM
+- MongoDB Atlas
+- Nodemon (para desenvolvimento)
 
-## 🎯 Objetivos do Projeto
+---
 
-- 🔹 Familiarizar-se com o uso do **Express** em conjunto com **TypeScript**.  
-- 🔹 Explorar boas práticas de arquitetura e organização de projetos.  
-- 🔹 Criar servidores web em segundos com estrutura pré-configurada.  
-- 🔹 Facilitar o desenvolvimento de APIs robustas e bem documentadas.  
-- 🔹 Servir como ponto de partida para projetos maiores e mais complexos.  
+## 📂 Estrutura do projeto
 
-## 🚀 Funcionalidades
+Projeto-express-API/
+├── prisma/
+│   ├── schema.prisma
+│   └── prisma.config.ts
+├── server.js
+├── package.json
+└── .env
 
-- Geração automática de estrutura de pastas e arquivos.  
-- Configuração inicial de rotas, middlewares e controladores.  
-- Suporte completo ao **TypeScript** com tipagem estática.  
-- Pronto para expansão e personalização conforme as necessidades do projeto.  
+---
 
-## 📚 Aprendizados
+## ⚙️ Instalação e execução
 
-Este projeto contribui para o entendimento de:  
-- Integração entre **Express** e **TypeScript**.  
-- Estruturação de projetos escaláveis.  
-- Uso de tipagem estática para evitar erros em tempo de execução.  
-- Boas práticas de desenvolvimento backend.  
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seuusuario/Projeto-express-API.git
+   cd Projeto-express-API
 
+2. Instale as dependências:
+   npm install
+   
+3. Configure o arquivo .env com sua conexão MongoDB:
+  DATABASE_URL="mongodb+srv://gerlucio_db_user:SUA_SENHA@cluster0.lezdn17.mongodb.net/projeto_api?retryWrites=true&w=majority"
+ 
+4. Gere o cliente Prisma:
+ npx prisma generate
+
+5. Execute o servidor:
+   npm run dev
+
+O servidor estará rodando em:
+http://localhost:8080
+
+📌 Endpoints da API
+Rota inicial
+GET /  
+Retorna mensagem de status da API.
+
+Usuários
+Listar todos
+GET /usuarios  
+Retorna todos os usuários cadastrados.
+
+Buscar por ID
+GET /usuarios/:id  
+Retorna um usuário específico pelo ID.
+
+Criar usuário
+POST /usuarios  
+Cria um novo usuário.
+
+Body (JSON):
+
+{
+  "nome": "João",
+  "email": "joao@email.com",
+  "age": 25
+}
+
+Atualizar usuário (PUT)
+PUT /usuarios/:id  
+Atualiza todos os campos de um usuário.
+
+Body (JSON):
+
+{
+  "nome": "João Silva",
+  "email": "joao@novo.com",
+  "age": 30
+}
+
+Atualizar parcialmente (PATCH)
+PATCH /usuarios/:id  
+Atualiza apenas os campos enviados.
+
+Body (JSON):
+
+{
+  "email": "joao@editado.com"
+}
+
+Deletar usuário
+DELETE /usuarios/:id  
+Remove um usuário pelo ID.
+
+🛠️ Ferramentas de teste
+Thunder Client (VS Code)
+
+Postman
+
+MongoDB Compass (para visualizar os dados no banco)
+
+📖 Próximos passos
+-Implementar autenticação (JWT).
+-Adicionar validações mais robustas.
+-Criar testes automatizados.
+
+
+
+
+
+
+
+  
